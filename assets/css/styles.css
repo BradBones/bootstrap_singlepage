@@ -5,7 +5,6 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #666;
   padding-top: 54px;
-  background: url(https://www.toptal.com/designers/subtlepatterns/patterns/notebook.png);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -49,6 +48,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Very specific "Fargo Red" to underline the navbar */
 .navbar {
   border-bottom: 2px solid rgb(187, 10, 30);
+}
+
+/* Adds a "|" after each link to separate them (but not after the last link) */
+nav li:not(:first-child):before {
+  content: " | ";
+  opacity: 0.3;
+  position: absolute;
+  padding-top: .5em;
 }
 
 /* Styles an hr element to match the header and footer border
