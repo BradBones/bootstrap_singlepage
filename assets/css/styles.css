@@ -1,0 +1,78 @@
+
+/* Adds some white space between the header bar and the page content */
+body {
+  font-size: .85em;
+  font-family: 'Montserrat', sans-serif;
+  color: #666;
+  padding-top: 54px;
+  background: url(https://www.toptal.com/designers/subtlepatterns/patterns/notebook.png);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+}
+
+/* Overrides the generic form-control class in bootstrap */
+.form-control {
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+  color: #666;
+}
+
+.red {
+  color: rgb(187, 10, 30);
+}
+
+.dark {
+  color: #333;
+}
+
+/*
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+*/
+
+/* Forces all of the cards in the portfolio to fill their container vertically
+(so that the bottom edges line up.) */
+.card {
+  height: 100%;
+  border: 1px solid #999;
+}
+
+.card-footer {
+  border-top: 1px solid #999;
+}
+
+/* Very specific "Fargo Red" to underline the navbar */
+.navbar {
+  border-bottom: 2px solid rgb(187, 10, 30);
+}
+
+/* Styles an hr element to match the header and footer border
+Only to be used if needed */
+.divider {
+  border: 1px solid rgb(187, 10, 30);
+}
+
+/* creates custom themed red bullets in lists with the class .red-dot 
+It's silly, but I'm really proud of this!! ;) */
+ul.red-dot {
+  list-style: none;
+}
+
+ul.red-dot li::before  {
+  content: "•"; color: rgb(187, 10, 30);
+  font-size: 1.25em;
+  font-weight: 500;
+  display: inline-block; width: 1em;
+  margin-left: -1em
+}
+
+
+footer {
+  font-size: .5em;
+  border-top: 2px solid rgb(187, 10, 30);
+}
