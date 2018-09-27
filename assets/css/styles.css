@@ -1,5 +1,12 @@
+/*
 
-/* Adds some white space between the header bar and the page content */
+******* CUSTOM SETTINGS TO OVERRIDE BOOTSTRAP DEFAULTS *******
+
+====================
+GENERAL PAGE STYLING
+====================
+
+Adds some white space between the header bar and the page content */
 body {
   font-size: .85em;
   font-family: 'Montserrat', sans-serif;
@@ -7,17 +14,46 @@ body {
   padding-top: 54px;
 }
 
+/* Changes defalt black text for headers to a softer grey */
 h1, h2, h3, h4, h5, h6 {
   color: #333;
 }
 
-/* Overrides the generic form-control class in bootstrap */
+
+/*
+====================
+FORMS
+====================
+
+Overrides the generic form-control class typography settings */
 .form-control {
   font-size: 1em;
   font-family: 'Montserrat', sans-serif;
   color: #666;
 }
 
+/* Changes the placeholder text color in forms to the theme red
+various settings for diferent browsers */
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(187, 10, 30);
+  opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgb(187, 10, 30);
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgb(187, 10, 30);
+}
+
+
+/*
+====================
+ELEMENT THEME COLORS
+====================
+
+Classes for changing elements to the theme red color or dark grey */
 .red {
   color: rgb(187, 10, 30);
 }
@@ -26,15 +62,13 @@ h1, h2, h3, h4, h5, h6 {
   color: #333;
 }
 
-/*
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
-}
-*/
 
-/* Forces all of the cards in the portfolio to fill their container vertically
+/*
+====================
+CARDS - HEIGHT & LINE COLORS
+====================
+
+"Height 100%" forces all of the cards in the portfolio to fill their container vertically
 (so that the bottom edges line up.) */
 .card {
   height: 100%;
@@ -45,7 +79,13 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 1px solid #999;
 }
 
-/* Very specific "Fargo Red" to underline the navbar */
+
+/*
+====================
+NAV BAR TRICKS
+====================
+
+Very specific "Fargo Red" to underline the navbar */
 .navbar {
   border-bottom: 2px solid rgb(187, 10, 30);
 }
@@ -58,18 +98,21 @@ nav li:not(:first-child):before {
   padding-top: .5em;
 }
 
-/* Styles an hr element to match the header and footer border
-Only to be used if needed */
-.divider {
-  border: 1px solid rgb(187, 10, 30);
-}
 
-/* creates custom themed red bullets in lists with the class .red-dot 
-It's silly, but I'm really proud of this!! ;) */
+/*
+====================
+UNORDERED LIST TRICKS
+====================
+
+Creates custom themed red bullets in lists with the class .red-dot 
+It's silly, but I'm really proud of this!! ;)
+
+Resets default list styles (removes all bullets) */
 ul.red-dot {
   list-style: none;
 }
 
+/* Cureates new custom themed bullets */
 ul.red-dot li::before  {
   content: "•"; color: rgb(187, 10, 30);
   font-size: 1.25em;
@@ -79,6 +122,12 @@ ul.red-dot li::before  {
 }
 
 
+/*
+====================
+FOOTER
+====================
+
+Styles the footer to match the nav bar at the top of the page */
 footer {
   font-size: .5em;
   border-top: 2px solid rgb(187, 10, 30);
